@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   Garden.init({
     creatureName: DataTypes.STRING,
     image: DataTypes.STRING,
+    userId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Garden',
