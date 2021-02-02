@@ -25,8 +25,8 @@ app.use(methodOverride("_method"));
 //To serve static file (CSS)
 app.use(express.static(__dirname + "/public"));
 
+app.use("/build-a-creature", routes.buildACreature);
 /*
-app.use("/pokemon", routes.pokemon);
 app.use("/players", routes.players);
 app.use("/teams", routes.teams);
 */
