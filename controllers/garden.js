@@ -10,6 +10,11 @@ const index = (req, res) => {
     });
 }; 
 
+const createAnimal = (req, res) => {
+    console.log(req.body),
+    res.render("gardens/new.ejs")
+    }
+
 //READ (Show-Get)
 const show = (req, res) => {
     //console.log(req.params.index)
@@ -21,14 +26,6 @@ const show = (req, res) => {
             oneCreature: garden,
         });
     });
-}
-
-const createAnimal = (req, res) => {
-    console.log(req.body)
-    Garden.create(req.body)
-    .then(newCreature => {
-        console.log(newCreature)
-    })
 }
 
 module.exports = {
