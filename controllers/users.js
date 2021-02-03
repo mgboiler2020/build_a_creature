@@ -1,15 +1,18 @@
 const User = require('../models').User;
 const Garden = require('../models').Garden;
 
+
+//Display index "Welcome to Create a Creature" page
 const index = (req, res) => {  ///done
     res.render('users/index.ejs') //done
 }
 
+//Display Signup
 const renderSign = (req, res) => { //done
     res.render('users/signup.ejs')
 }
 
-///had to use solution code for the login function.  Need to research this.  
+//Login and verify username and password
 const login = (req, res) => {
     console.log(req.body);
     User.findOne({
@@ -22,6 +25,8 @@ const login = (req, res) => {
         res.redirect(`/users/profile/${foundUser.id}`); ///done
     })
 }
+
+//Allow a person to enter information and create a user account
 const signUp = (req, res) => {
     User.create(req.body)
     .then(newUser => {
@@ -29,16 +34,11 @@ const signUp = (req, res) => {
     })
   
 }
-
+//Display Login 
 const renderLogin = (req, res) => { //done
     res.render('users/login.ejs');
 }
-
-//     .then(foundUser => {
-//         res.redirect(`/player/profile/${foundUser.id}`); ///done
-//     })
-
-// }
+//Display Profile
 const renderProfile = (req, res) => {
     console.log(req.params.index);
     User.findByPk(req.params.index)
@@ -49,6 +49,29 @@ const renderProfile = (req, res) => {
         })
     })
 }
+//Allow user to edit their profile
+const editProfile = (req, res) => { //done
+    console.log(req.body);
+    User.update(req.body, {
+        where: {
+            id: req.params.index
+        },
+        returning: true
+    })
+    .then(editUser => {
+        res.redirect(`/users/profile/${req.params.index}`);
+    })
+}
+
+//Allow a user to delete their account
+const deleteUser = (req, res) => {
+    User.destroy({
+        where: {id: req.params.index}
+    })
+    .then(() => {
+        res.redirect('/users');
+    })
+}
 
 module.exports = {
     index,
@@ -57,6 +80,6 @@ module.exports = {
     signUp,
     renderLogin,
     login,
-    // editPlayer,
-    // playerDelete
+    editProfile,
+    deleteUser
 }
