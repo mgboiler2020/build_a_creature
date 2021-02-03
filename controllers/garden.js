@@ -1,5 +1,6 @@
 const Garden = require("../models").Garden;
 const User = require ("../models").User;
+const BodyPart = require("../models").BodyPart;
 
 //READ (Index-Get)
 const index = (req, res) => {
@@ -10,14 +11,25 @@ const index = (req, res) => {
     });
 }; 
 
+/*
 const createAnimal = (req, res) => {
     console.log(req.body),
     res.render("gardens/new.ejs")
     }
+    */
+
+const renderAnimal = (req, res) => {
+    console.log(req.body),
+    BodyPart.findAll()
+    .then(newAnimal => {
+        console.log(newAnimal)
+        res.render("gardens/new.ejs", {
+            newAnimal: newAnimal});
+        })
+    }
 
 //READ (Show-Get)
 const show = (req, res) => {
-    //console.log(req.params.index)
     Garden.findByPk(req.params.index, {
         
     }).then(garden => {
@@ -31,5 +43,6 @@ const show = (req, res) => {
 module.exports = {
     index,
     show,
-    createAnimal
+    //createAnimal,
+    renderAnimal
 };

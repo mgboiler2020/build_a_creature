@@ -3,7 +3,8 @@ const router = express.Router();
 const ctrl = require('../controllers');
 
 router.get("/", ctrl.garden.index); //READ (Index-Get)
-router.get("/new", ctrl.garden.createAnimal);
+//router.get("/new", ctrl.garden.createAnimal);
+router.post("/new", ctrl.garden.renderAnimal);
 
 router.get("/:index", ctrl.garden.show) //READ (Show-Get)
 
