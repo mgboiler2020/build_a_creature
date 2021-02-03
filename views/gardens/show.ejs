@@ -10,6 +10,16 @@
     </style>
 </head>
 <body>
-    <h1>Testing Display</h1>
+    <h1>Creature's Garden</h1>
+    This Creature's name is <%= oneCreature.name %> and it was created by:
+    
+            <%=oneCreature.Users[0].name%> 
+
+    <img src="<%= oneCreature.img %>" alt="Creature">
+
+    </br>
+    <form action="/garden" method="GET">
+        <input type="submit" value="Back" class="back"/>
+    </form>
 </body>
 </html>
