@@ -8,8 +8,7 @@ const index = (req, res) => {  ///done
 const renderSign = (req, res) => { //done
     res.render('users/signup.ejs')
 }
-
-///had to use solution code for the login function.  Need to research this.  
+  
 const login = (req, res) => {
     console.log(req.body);
     User.findOne({
@@ -34,11 +33,6 @@ const renderLogin = (req, res) => { //done
     res.render('users/login.ejs');
 }
 
-//     .then(foundUser => {
-//         res.redirect(`/player/profile/${foundUser.id}`); ///done
-//     })
-
-// }
 const renderProfile = (req, res) => {
     console.log(req.params.index);
     User.findByPk(req.params.index)
@@ -50,6 +44,28 @@ const renderProfile = (req, res) => {
     })
 }
 
+const editProfile = (req, res) => { //done
+    console.log(req.body);
+    User.update(req.body, {
+        where: {
+            id: req.params.index
+        },
+        returning: true
+    })
+    .then(editUser => {
+        res.redirect(`/users/profile/${req.params.index}`);
+    })
+}
+const deleteUser = (req, res) => {
+    User.destroy({
+        where: {id: req.params.index}
+        // where: {id: req.user.id}
+    })
+    .then(() => {
+        res.redirect('/users');
+    })
+}
+
 module.exports = {
     index,
     renderSign,
@@ -57,6 +73,6 @@ module.exports = {
     signUp,
     renderLogin,
     login,
-    // editPlayer,
-    // playerDelete
+    editProfile,
+    deleteUser
 }
