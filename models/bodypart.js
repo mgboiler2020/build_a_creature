@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       BodyPart.belongsTo(models.User, {
         through: "Building",
         foreignKey: "bodyPartId",
-        otherKey: "userId"
+        otherKey: "id"
       })
     }
   };

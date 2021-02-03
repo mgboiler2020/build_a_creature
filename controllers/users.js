@@ -1,4 +1,5 @@
 const User = require('../models').User;
+const Garden = require('../models').Garden;
 
 const index = (req, res) => {  ///done
     res.render('users/index.ejs') //done
@@ -17,6 +18,9 @@ const login = (req, res) => {
             password: req.body.password //done
         }
     })
+    .then(foundUser => {
+        res.redirect(`/users/profile/${foundUser.id}`); ///done
+    })
 }
 const signUp = (req, res) => {
     User.create(req.body)
@@ -30,19 +34,16 @@ const renderLogin = (req, res) => { //done
     res.render('users/login.ejs');
 }
 
-    // .then(foundUser => {
-    //     res.redirect(`/player/profile/${foundUser.id}`); ///done
+//     .then(foundUser => {
+//         res.redirect(`/player/profile/${foundUser.id}`); ///done
 //     })
 
 // }
 const renderProfile = (req, res) => {
-    User.findByPk(req.params.index, {
-        include: [{
-            model: User,
-            attributes: ['id','name']
-        }] 
-    })
+    console.log(req.params.index);
+    User.findByPk(req.params.index)
     .then(userProfile => {
+        console.log(userProfile);
         res.render('users/profile.ejs', {
             user: userProfile
         })

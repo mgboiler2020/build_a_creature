@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Garden extends Model {
     static associate(models) {
       Garden.belongsTo(models.User, {
-        foreignKey: "userId" });
+        foreignKey: "id" });
     }
   };
   Garden.init({

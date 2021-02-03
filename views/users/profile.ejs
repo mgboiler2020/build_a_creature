@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+        h1 {font-family: 'Emilys Candy', cursive}
+    </style>
 </head>
 <body>
-    <form action='/users/profile/<%=user.id%>?_method=PUT' method='POST'>
+    <form action='/users/profile/?_method=PUT' method='POST'>
         Name: <input type='text' name='name' value='<%=user.name%>'/><br/>
         Username: <input type='text' name='username' value='<%=user.username%>'/><br/>
         Password: <input type='text' name='password' value='<%=user.password%>'/><br/>
-        Creature: <select name="id">
-            <% for ( let i = 0; i < gardens.length; i++ ) {
-                let selected = ( i == 0 ) ? "selected" : "";
-            %>
-                <option value="<%=gardens[i].id%>" <%=selected%>><%=gardens[i].creatureName%>
-                </option>
-           <% } %>
+        
 </body>
 </html>
