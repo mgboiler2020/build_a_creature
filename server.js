@@ -5,12 +5,10 @@ const app = express();
 // const methodOverride = require("method-override");
 const routes = require("./routes");
 
-/*
+
 //Data
- const pokemon = require("./models/pokemon.js");
- 
- const teams = require("./models/team.js");
- */
+const garden = require("./models/garden.js");
+const build = require("./models/building.js");
 const users = require("./models/user.js");
 
 //MIDDLEWARE
@@ -26,9 +24,9 @@ app.use(express.urlencoded({ extended: true }));
 //To serve static file (CSS)
 app.use(express.static(__dirname + "/public"));
 
-// app.use("/build", routes.build);
+app.use("/build", routes.build);
 app.use('/users', routes.users);
-// app.use('/garden', routes.garden);
+app.use('/gardens', routes.garden);
 /*
 app.use("/players", routes.players);
 app.use("/teams", routes.teams);

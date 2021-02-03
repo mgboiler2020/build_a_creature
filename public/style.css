@@ -1,9 +1,108 @@
 body {
-    background-color: #ffcc03;
+    text-align: center;
+    background-color: #b1d989;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #f26b1d
+}
+h2 {
+    font-size: 24px;
+    color: #3f5ca8;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a, .goto, .back {
+    font-family: 'Emilys Candy', cursive;
+    text-decoration: none;
+    color: #3f5ca8;
+    border: 2px solid #20376b;
+    border-radius: 10px;
+    box-shadow: 0.5rem 0.5rem 1rem #3f5ca8;
+    padding: 0.5rem;
+    background-color: #ffcc03;
+    font-size: 18px;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.back {
+    margin-top: 1rem;
+}
+
+.poke, .creature {
+    font-family: 'Emilys Candy', cursive;
+    text-decoration: none;
+    font-size: 16px;;
+}
+
+.poke:visited, .creature:visited {
+    color: black;
+}
+
+.edit:visited {
+    color:#ffcc03;
+}
+
+ul {
+    margin-top: 2rem;
+    list-style: none;
+}
+
+.edit, .delete, .action {
+    background-color: #3f5ca8;
+    color: #ffcc03;
+    border: 2px solid #20376b;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.action {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.delete {
+    margin-right: 1rem;
+}
+
+input[type=text], input[type=url], input[type=password], select, label {
+    font-size: 18px;
+}
+
+div {
+    display: flex;
+    margin-top: 1rem;
+}
+
+img {
+    border-width: 4px; 
+    border-color: #3f5ca8; 
+    border-style: solid; 
+    border-radius: 10px;
+}
+
+.main_image {
+    border: none;
+    margin: 2rem auto 0 auto;
+    justify-content: center;
+    box-shadow: 0.5rem 0.5rem 1rem #3f5ca8;
 }

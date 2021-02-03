@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build-a-Creature</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+        h1 {font-family: 'Emilys Candy', cursive}
+    </style>
+</head>
+<body>
+    <h1>Creature's Garden</h1>
+    <nav>
+        <a class="goto" href="/build">Go to Create-a-Creature App</a>
+    </nav>
+    <ul>
+        <% for (let i=0; i<allCreatures.length; i++) { %> 
+            <li>
+                <a class="creature" href="/creatures/<%=allCreatures[i].id%>"><%=allCreatures[i].name%></a>
+            </li>
+            <br>
+        <% } %> 
+    </ul>
+
+    <form action="/build" method="GET">
+        <input type="submit" value="Exit" class="back"/>
+    </form>
+
+</body>
+</html>
