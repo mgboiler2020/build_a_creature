@@ -18,9 +18,15 @@ h1 {
     color: #023859
 }
 h2 {
-    font-size: 60px;
+    font-size: 56px;
     color: #023859;
     text-align: center;
+    font-family: 'Emilys Candy', cursive;
+}
+
+h3 {
+    font-size: 36px;
+    color: #f27a5e;
     font-family: 'Emilys Candy', cursive;
 }
 
@@ -48,15 +54,20 @@ nav a, .goto, .back {
     margin-top: 1rem;
 }
 
-.poke, .creature {
+.bodypart, .creature {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
     font-size: 38px;
     color: #f27a5e;
 }
 
-.poke:visited, .creature:visited {
-    color: black;
+.bodypart {
+    color: #023859;
+    font-size: 28px;
+}
+
+.creature:visited {
+    color: #023859;
 }
 
 .edit:visited {
@@ -70,9 +81,9 @@ ul {
 }
 
 .edit, .delete, .action {
-    background-color: #3f5ca8;
-    color: #ffcc03;
-    border: 2px solid #20376b;
+    background-color: #f2cdac;
+    color: #f20505;
+    border: 2px solid #f20505;
     border-radius: 10px;
     padding: 0.5rem;
     text-decoration: none;
@@ -111,4 +122,14 @@ img {
     margin: 2rem auto 0 auto;
     justify-content: center;
     box-shadow: 0.5rem 0.5rem 1rem #3f5ca8;
+}
+
+.available {
+    margin-top: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#create {
+    float: right;
 }

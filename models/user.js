@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsTo(models.BodyPart, {
         through: "Building",
         foreignKey: "id",
-        otherKey: "bodyPartId",
+        otherKey: "id",
       })
     }
   };

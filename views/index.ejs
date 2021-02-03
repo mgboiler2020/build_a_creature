@@ -11,16 +11,18 @@
 </head>
 <body>
     <h2>You can start building your creature now!</h2>
+    <h3>Cehck the body parts you want to use:</h3>
 
-    <h3><%=bodyparts%> </h3>
-
-    <ul>
+    <form action="/gardens/new" method="POST">
+    <ul class="available">
         <% for (let i=0; i<bodyparts.length; i++) { %> 
-            <li>
-                <a class="bodypart" href="/gardens/<%=allCreatures[i].id%>"><%=allCreatures[i].creatureName%></a>
+            <li class="bodypart"><%=bodyparts[i].name%>
+                <input type="checkbox" name="<%=bodyparts[i].id%>"/>
             </li>
-            <br>
         <% } %> 
     </ul>
+    <input type="submit" value="Create Creature" class="goto"/>
+    </form>
+
 </body>
 </html>
