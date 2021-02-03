@@ -11,20 +11,22 @@
 </head>
 <body>
     <h2>You can start building your creature now!</h2>
+    <h3>Pick the body parts you need from the box on the left.</h3>
 
 <div  class="gridContainer">
-    <div class="gridItem" id="available">
-    <ul>
+    <div class="gridItem">
+    <ul class="available">
         <% for (let i=0; i<bodyparts.length; i++) { %> 
-            <li>
-                <a class="bodypart" href="/gardens/<%=bodyparts[i].id%>"><%=bodyparts[i].name%></a>
+            <li class="bodypart">
+                <%=bodyparts[i].name%>
+                <input type="submit" value="Pick" class="action">
             </li>
-            <br>
         <% } %> 
     </ul>
     </div>
-    <div class="gridItem" id="inProcess">IN PROCESS</div>
+    <div class="gridItem">IN PROCESS</div>
 </div>
+<input type="submit" value="CREATE" class="goto" id="create">
 
 </body>
 </html>
