@@ -23,7 +23,16 @@ const show = (req, res) => {
     });
 }
 
+const createAnimal = (req, res) => {
+    console.log(req.body)
+    Garden.create(req.body)
+    .then(newCreature => {
+        console.log(newCreature)
+    })
+}
+
 module.exports = {
     index,
-    show
+    show,
+    createAnimal
 };

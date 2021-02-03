@@ -2,7 +2,7 @@
 const { request } = require('express');
 const express = require("express");
 const app = express();
-// const methodOverride = require("method-override");
+const methodOverride = require("method-override");
 const routes = require("./routes");
 
 
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 //To convert data submitted into a format the server can read
 app.use(express.urlencoded({ extended: true }));
 //To delete/exit existing data
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 //To serve static file (CSS)
 app.use(express.static(__dirname + "/public"));
 
