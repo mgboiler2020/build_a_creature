@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       BodyPart.belongsTo(models.User, {
         through: "Building",
-        foreignKey: "bodyPartId",
-        otherKey: "userId"
+        foreignKey: "id",
+        otherKey: "id"
       })
     }
   };
