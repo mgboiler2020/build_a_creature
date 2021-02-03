@@ -18,6 +18,13 @@ const login = (req, res) => {
         }
     })
 }
+const signUp = (req, res) => {
+    User.create(req.body)
+    .then(newUser => {
+        res.redirect(`/users/profile/${newUser.id}`);
+    })
+  
+}
 
 const renderLogin = (req, res) => { //done
     res.render('users/login.ejs');
@@ -28,12 +35,25 @@ const renderLogin = (req, res) => { //done
 //     })
 
 // }
+const renderProfile = (req, res) => {
+    User.findByPk(req.params.index, {
+        include: [{
+            model: User,
+            attributes: ['id','name']
+        }] 
+    })
+    .then(userProfile => {
+        res.render('users/profile.ejs', {
+            user: userProfile
+        })
+    })
+}
 
 module.exports = {
     index,
     renderSign,
-    // renderProfile,
-    // signUp,
+    renderProfile,
+    signUp,
     renderLogin,
     login,
     // editPlayer,
