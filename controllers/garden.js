@@ -19,7 +19,9 @@ const createAnimal = (req, res) => {
     */
 
 const renderAnimal = (req, res) => {
+    selectedParts: req.body,
     console.log(req.body),
+    console.log(selectedParts),
     BodyPart.findAll()
     .then(newAnimal => {
         console.log(newAnimal)
