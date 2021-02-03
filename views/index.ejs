@@ -10,6 +10,17 @@
     </style>
 </head>
 <body>
-    <h1>You can start building your creature now!</h1>
+    <h2>You can start building your creature now!</h2>
+
+    <h3><%=bodyparts%> </h3>
+
+    <ul>
+        <% for (let i=0; i<bodyparts.length; i++) { %> 
+            <li>
+                <a class="bodypart" href="/gardens/<%=allCreatures[i].id%>"><%=allCreatures[i].creatureName%></a>
+            </li>
+            <br>
+        <% } %> 
+    </ul>
 </body>
 </html>
