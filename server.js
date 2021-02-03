@@ -27,10 +27,7 @@ app.use(express.static(__dirname + "/public"));
 app.use("/build", routes.build);
 app.use('/users', routes.users);
 app.use('/gardens', routes.garden);
-/*
-app.use("/players", routes.players);
-app.use("/teams", routes.teams);
-*/
+
 //LISTEN
 app.listen(3000, () => {
     console.log("My build-a-creature app is set up and running");
