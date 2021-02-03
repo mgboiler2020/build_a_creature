@@ -12,15 +12,19 @@
 <body>
     <h2>You can start building your creature now!</h2>
 
-    <h3><%=bodyparts%> </h3>
-
+<div  class="gridContainer">
+    <div class="gridItem" id="available">
     <ul>
         <% for (let i=0; i<bodyparts.length; i++) { %> 
             <li>
-                <a class="bodypart" href="/gardens/<%=allCreatures[i].id%>"><%=allCreatures[i].creatureName%></a>
+                <a class="bodypart" href="/gardens/<%=bodyparts[i].id%>"><%=bodyparts[i].name%></a>
             </li>
             <br>
         <% } %> 
     </ul>
+    </div>
+    <div class="gridItem" id="inProcess">IN PROCESS</div>
+</div>
+
 </body>
 </html>

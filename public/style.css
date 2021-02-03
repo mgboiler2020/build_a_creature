@@ -112,3 +112,19 @@ img {
     justify-content: center;
     box-shadow: 0.5rem 0.5rem 1rem #3f5ca8;
 }
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    grid-gap: 5rem;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.gridItem {
+    background-color: rgba(242, 122, 94, 0.5);
+    border: 1px solid #023859;
+    padding: 3rem;
+    font-size: 25px;
+    text-align: left;
+}
