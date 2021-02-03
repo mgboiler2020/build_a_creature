@@ -11,14 +11,13 @@
 </head>
 <body>
     <h1>Creature's Garden</h1>
-    This Creature's name is <%= oneCreature.name %> and it was created by:
-    
-            <%=oneCreature.Users[0].name%> 
+    This Creature's name is 
+    <%= oneCreature.creatureName %> and it was created by: <%=oneCreature.userId%> 
+<br/>
+    <img src="<%=oneCreature.image%>" alt="Creature">
 
-    <img src="<%= oneCreature.img %>" alt="Creature">
-
-    </br>
-    <form action="/garden" method="GET">
+    <br>
+    <form action="/gardens" method="GET">
         <input type="submit" value="Back" class="back"/>
     </form>
 </body>
