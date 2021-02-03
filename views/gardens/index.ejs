@@ -14,17 +14,18 @@
     <nav>
         <a class="goto" href="/build">Go to Create-a-Creature App</a>
     </nav>
+
     <ul>
         <% for (let i=0; i<allCreatures.length; i++) { %> 
             <li>
-                <a class="creature" href="/creatures/<%=allCreatures[i].id%>"><%=allCreatures[i].name%></a>
+                <a class="creature" href="/gardens/<%=allCreatures[i].id%>"><%=allCreatures[i].creatureName%></a>
             </li>
             <br>
         <% } %> 
     </ul>
 
     <form action="/build" method="GET">
-        <input type="submit" value="Exit" class="back"/>
+        <input type="submit" value="EXIT" class="back"/>
     </form>
 
 </body>

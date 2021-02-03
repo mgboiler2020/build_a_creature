@@ -1,8 +1,8 @@
 body {
     text-align: center;
-    background-color: #b1d989;
+    background-color: #f2cdac;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 25px;
 }
 a {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,13 +14,12 @@ h1 {
     font-size: 70px;
     text-align: center;
     letter-spacing: 2px;
-    color: #f26b1d
+    color: #023859
 }
 h2 {
     font-size: 24px;
-    color: #3f5ca8;
+    color: #023859;
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
 }
 
 nav {
@@ -31,15 +30,16 @@ nav {
 nav a, .goto, .back {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
-    color: #3f5ca8;
-    border: 2px solid #20376b;
+    color: whitesmoke;
+    border: 2px solid #023859;
     border-radius: 10px;
-    box-shadow: 0.5rem 0.5rem 1rem #3f5ca8;
+    box-shadow: 0.5rem 0.5rem 1rem #f27a5e;
     padding: 0.5rem;
-    background-color: #ffcc03;
-    font-size: 18px;
+    background-color: #f27a5e;
+    font-size: 24px;
     margin-right: 1rem;
     margin-bottom: 2rem;
+    letter-spacing: 1px;
 }
 
 .back {
@@ -49,7 +49,8 @@ nav a, .goto, .back {
 .poke, .creature {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
-    font-size: 16px;;
+    font-size: 38px;
+    color: #f27a5e;
 }
 
 .poke:visited, .creature:visited {
@@ -63,6 +64,7 @@ nav a, .goto, .back {
 ul {
     margin-top: 2rem;
     list-style: none;
+    padding-inline-start: 0;
 }
 
 .edit, .delete, .action {
@@ -94,10 +96,12 @@ div {
 }
 
 img {
+    margin-top: 2rem;
     border-width: 4px; 
-    border-color: #3f5ca8; 
+    border-color: #f27a5e; 
     border-style: solid; 
     border-radius: 10px;
+    box-shadow: 0.5rem 0.5rem 1rem #f27a5e;
 }
 
 .main_image {
