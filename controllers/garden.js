@@ -3,11 +3,8 @@ const User = require ("../models").User;
 
 //READ (Index-Get)
 const index = (req, res) => {
-    Garden.findAll().then(gardens => {
-        res.render("garden/index.ejs", { 
-            allCreatures: gardens,
-        });
-    });
+        res.render("gardens/index.ejs"
+    );
 }; 
 
 //READ (Show-Get)
@@ -18,7 +15,7 @@ const show = (req, res) => {
         }],
     }).then(garden => {
         console.log(garden),
-        res.render("garden/show.ejs", { 
+        res.render("gardens/show.ejs", { 
             oneCreature: garden,
         });
     })
