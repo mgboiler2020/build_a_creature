@@ -19,15 +19,12 @@ const createAnimal = (req, res) => {
     */
 
 const renderAnimal = (req, res) => {
-    selectedParts: req.body,
-    console.log(req.body),
-    console.log(selectedParts),
     BodyPart.findAll()
     .then(newAnimal => {
-        console.log(newAnimal)
         res.render("gardens/new.ejs", {
             newAnimal: newAnimal});
-        })
+            checkedParts: req.body;
+        }),console.log(checkedParts)
     }
 
 //READ (Show-Get)

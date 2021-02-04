@@ -13,7 +13,12 @@
 <body>
     
 <h1> NEW</h1>
-<h2> <%=newAnimal  %> </h2>
+
+
+<% for (let i=0; i<newAnimal.length; i++) { %> 
+    <li><%=newAnimal[i].name%>-<%=newAnimal[i].buildingId%> </li>
+    <br>
+<% } %> 
 
 </body>
 </html>
