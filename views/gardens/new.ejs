@@ -13,11 +13,9 @@
 <body>
     
     <h2>These are the body parts you selected:</h2>
+    <h3></h3>
 
-    <% for (let i=0; i<selectedPart.length; i++) { %>
-        <li class="bodypart"><%=selectedPart[i].name%> </li>
-    <% } %> 
-    <br>
+    
 
     <form action='/gardens' method='POST'>
         Type the name of your Creature:
