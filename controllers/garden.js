@@ -19,13 +19,18 @@ const createAnimal = (req, res) => {
     */
 
 const renderAnimal = (req, res) => {
-    BodyPart.findByPk(req.params.name)
-    .then(newAnimal => {
-        res.render("gardens/new.ejs", {
-            newAnimal: newAnimal});
-            console.log(newAnimal)
+    console.log(req.body);
+    BodyPart.findAll({
+        where: {
+          id: req.body.bodypart  
+        }
+    }).then(selectedPart => {
+        console.log(selectedPart)
+        res.render("gardens/new.ejs",{
+            selectedPart: selectedPart
         })
-    }
+    })
+}
 
 //READ (Show-Get)
 const show = (req, res) => {
