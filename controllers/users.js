@@ -72,6 +72,9 @@ const deleteUser = (req, res) => {
         res.redirect('/users');
     })
 }
+const renderIndex = (req, res) => { //done
+    res.render('index.ejs');
+}
 
 module.exports = {
     index,
@@ -81,5 +84,7 @@ module.exports = {
     renderLogin,
     login,
     editProfile,
-    deleteUser
+    deleteUser,
+    renderIndex
+   
 }
