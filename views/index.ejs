@@ -16,8 +16,9 @@
     <form action="/gardens/new" method="POST">
     <ul class="available">
         <% for (let i=0; i<bodyparts.length; i++) { %> 
-            <li class="bodypart"><%=bodyparts[i].name%>
-                <input type="checkbox" name="<%=bodyparts[i].id%>"/>
+            <li>
+                <input type="checkbox" name="<%=bodyparts[i].id%>" class="bodypart" value="<%=bodyparts[i].name%>"/>
+                <label for="<%=bodyparts[i].id%>"><%=bodyparts[i].name%></label>
             </li>
         <% } %> 
     </ul>

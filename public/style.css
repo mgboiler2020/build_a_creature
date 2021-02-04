@@ -54,14 +54,14 @@ nav a, .goto, .back {
     margin-top: 1rem;
 }
 
-.bodypart, .creature {
+.creature, .available {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
     font-size: 38px;
     color: #f27a5e;
 }
 
-.bodypart {
+.available {
     color: #023859;
     font-size: 28px;
 }
