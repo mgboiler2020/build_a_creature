@@ -31,38 +31,50 @@ Once in the build screen the user can select the body parts needed via checkboxe
 
 ## Images
 ### Wireframe
-![WF1](/readme_images/wireframe1.jpeg)
-![WF2](/readme_images/wireframe2.jpeg)
+![WF](/readme_images/wireframe.png)
+
 
 ### Welcome Screen
-![Intro](/readme_images/Intro.png)
+![welcome](/readme_images/welcome.png)
 
-### Question
-![Question](/readme_images/Question.png)
+### Sign Up
+![signup](/readme_images/signup.png)
 
-### Answer & Score
-![Answer](/readme_images/Answer.png)
+### Login
+![login](/readme_images/Answerlogin.png)
 
-### Exit
-![Exit](/readme_images/Exit.png)
+### User Profile
+![userprofile](/readme_images/userprofile.png)
+
+### User Profile
+![userprofile](/readme_images/userprofile.png)
+
+### Create Creature
+![buildEJS](/readme_images/buildEJS.png)
+
+### Show Creature Garden
+![garden-show](/readme_images/Garden-Show.png)
 
 ## Goals
 ### Minimum Viable Product
-+ 10 multiple choice questions ✔︎
-+ No photos ✔︎
-+ Type answer and hit submit ✔︎
-+ Score shown on exit screen ✔︎
-### Stretch Goal 1
-+ The completed creature will be assigned to the user ID and the user can see all the creatures they have created.
++ User model has full CRUD✔︎
++ User selects body parts ✔︎
++ User gives new creature a name ✔︎
++ New creature is created in database ✔︎
++ All creatures created are displayed in gallery ✔︎
++ The completed creature will be assigned to the user ID ✔︎
+
+### Stretch Goal 1 (might move back to MVP)
++ The completed creature will be assigned to the user ID and the user can see all the creatures they have created in the past.
 
 ### Stretch Goal 2
-+ I want to be able to create an imaginary animal
++ We want to be able to create an imaginary animal.
 
 ### Strecth Goal 3
-+ I don’t want to be able to create the same animal I did previously
++ We don’t want to be able to create the same animal we did previously
 
-### Strecth Goal 3
-+ I want to see an image of the animal I created
+### Strecth Goal 4
++ We want to see images of the animals we created
 
 ## Author
-Ana Cecilia Maldonado Cervantes and Matt Guffy
+Ana Cecilia Maldonado Cervantes and Matthew Otis Guffy
