@@ -24,7 +24,8 @@ const show = (req, res) => {
     Garden.findByPk(req.params.index, {
 
     }).then(garden => {
-        console.log(garden),
+        console.log(garden.userId),
+        User.findByPk(garden.userId)
         res.render("gardens/show.ejs", { 
             oneCreature: garden,
         });
