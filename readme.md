@@ -1,33 +1,33 @@
-# Software Engineer Immersive Program - Project 1
-## Trivia Game
-Multiple choice question game about México
+# Software Engineer Immersive Program - Project 2
+## Build-a-Creature
+An online creature creation app (similar to Build-a-Bear)
 
 ## Description & Motivation
-I would like people to learn about some interesting and fun facts about México by playing this game. The player will be asked random questions with three choices to select their answer from and they will need to beat the Ignorance by scoring the highest amount of correct answers.
+We wanted to create an app for kids of all ages to be able to select animal body components and "build" them into complete creatures.
 
 ## Technologies Used
-+ Command Line: Interaction with the computer and navigating the file system.
-+ Source Control: Interaction, management and uploading files and changes on code to Git repository
-+ Visual Studio Code: Coding on HTML, CSS and JavaScript
++ Command Line: Interaction with the computer and navigating the file system.  Running local server (nodemon)
++ Source Control: Interaction, management and uploading files and changes on code to Git repository.
++ Sequelize: Create database, tables, and generate data/seed files from command line.
++ Postgres: Database and tables
++ Visual Studio Code: Coding on HTML, CSS, JavaScript, and Express.
++ Production Deployment: Pubished/deployed via Heroku
 + Google Chrome Web Browser: Launching the website
 + Google Chrome Developer Tools: Debugging and solving problems in the code
++ Installed: Nodemon, Express, ejs, method-override
 
 ## Installation
-+ No special installation required:
 + Web Browser
 + Internet Connectivity
 
+
 ## Approach
-The game uses an array of objects to store the questions, response choices and correct answers. A separate array stores sources of images to be displayed when a 
-question is answered.
+The app is built on a SQL database.  Tables included: BodyParts (contains data for creature bodyparts), Buildings (a join table), Gardens (finished creatures), and Users (user data).
 
-By using the Fisher-Yates algorithm, the game is able to randomize the order in which the questions are displayed each time the webpage is loaded.
+The app allows for creation of new user accounts, login, editing, and deletion of the same.  Once logged in a user can view completed creatures in a gallery or choose to create creatures of their own by making a choice at the bottom of the User Profile screen. 
 
-The game begins by clicking on the "Start" button and it moves forward by using the "Next" button. The player is able to quit at any point once the game has 
-started by using the "Exit" button. Once on the exit screen, the game can be reloaded by using the "Play Again" button.
+Once in the build screen the user can select the body parts needed via checkboxes.  When all the appropriate body parts are chosen the user clicks on the Create Creature button.  This button navigates to a new screen where the creature will be displayed.
 
-Both the player's and "ignorance" (incorrectly answered questions) scores are stored in separate variables and shown on each screen. Once the 10 questions have been 
-answered, the game will automatically take the player to the Exit screen and will render who won the game.
 
 ## Images
 ### Wireframe
@@ -53,20 +53,16 @@ answered, the game will automatically take the player to the Exit screen and wil
 + Type answer and hit submit ✔︎
 + Score shown on exit screen ✔︎
 ### Stretch Goal 1
-+ Background image  ✔︎
-+ Display images about correctanswers once responses are submitted ✔︎
-+ Click on answer to select instead of typing ✔︎
-+ Ask and display player's name ✔︎
++ The completed creature will be assigned to the user ID and the user can see all the creatures they have created.
+
 ### Stretch Goal 2
-+ Add categories to select questions from
-+ Add questions ✔︎
-+ Select how many questions to answer ✔︎
-+ Randomize questions ✔︎
-+ Display scores for player and ignorance ✔︎
-+ Add modal when clicking "Exit" button (Are you sure you want to exit?) ✔︎
++ I want to be able to create an imaginary animal
+
 ### Strecth Goal 3
-+ Display information about the correct answer ✔︎
-+ Add audio effects
++ I don’t want to be able to create the same animal I did previously
+
+### Strecth Goal 3
++ I want to see an image of the animal I created
 
 ## Author
-Ana Cecilia Maldonado Cervantes
+Ana Cecilia Maldonado Cervantes and Matt Guffy
