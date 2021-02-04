@@ -27,8 +27,9 @@
 
     <nav>
         <form action="/build" method="GET">
-            <input type="submit" value="Create your Own Creature" name="<%=user.id%>" class="goto"/>
+            <input type="submit" value="Create your Creature" name="<%=user.id%>" class="goto"/>
         </form>
+        <a href="/build?id=<%=user.id%>" class="goto">Create your Own Creature</a>
         <a href="/gardens" class="goto">View all Creatures</a>
     </nav>
 
