@@ -29,6 +29,6 @@ app.use('/users', routes.users);
 app.use('/gardens', routes.garden);
 
 //LISTEN
-app.listen(3000, () => {
+app.listen(process.env.PORT||3000, () => {
     console.log("My build-a-creature app is set up and running");
 });
