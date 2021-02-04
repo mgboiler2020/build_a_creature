@@ -18,11 +18,11 @@
         <li class="bodypart"><%=selectedPart[i].name%> </li>
     <% } %> 
     <br>
-    
-    <form action='/gardens/show' method='POST'></form>
-    Type the name of your Creature:
-    <input type="text" placeholder="Creature's name"/><br>
-    <input type='submit' value='CREATE' class = "goto"/>
 
+    <form action='/gardens' method='POST'>
+        Type the name of your Creature:
+        <input type="text" placeholder="Creature's name" name="creatureName"/><br>
+        <input type='submit' value='CREATE' class= "goto"/>
+    </form>
 </body>
 </html>

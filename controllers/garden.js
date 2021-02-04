@@ -11,12 +11,13 @@ const index = (req, res) => {
     });
 }; 
 
-/*
 const createAnimal = (req, res) => {
-    console.log(req.body),
-    res.render("gardens/new.ejs")
-    }
-    */
+    Garden.create(req.body)
+    .then(newCreature => {
+        console.log(newCreature),
+        res.redirect("/gardens")
+    })
+}
 
 const renderAnimal = (req, res) => {
     BodyPart.findAll({
@@ -45,6 +46,6 @@ const show = (req, res) => {
 module.exports = {
     index,
     show,
-    //createAnimal,
+    createAnimal,
     renderAnimal
 };
