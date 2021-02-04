@@ -3,6 +3,7 @@ body {
     background-color: #f2cdac;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    color:#023859;
 }
 
 a {
@@ -17,6 +18,7 @@ h1 {
     letter-spacing: 2px;
     color: #023859
 }
+
 h2 {
     font-size: 56px;
     color: #023859;
@@ -35,7 +37,7 @@ nav {
     justify-content: center;
 }
 
-nav a, .goto, .back {
+nav a, .goto, .back, .action {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
     color: whitesmoke;
@@ -81,14 +83,8 @@ ul {
     padding-inline-start: 0;
 }
 
-.edit, .delete, .action {
-    background-color: #f2cdac;
-    color: #f20505;
+.action {
     border: 2px solid #f20505;
-    border-radius: 10px;
-    padding: 0.5rem;
-    text-decoration: none;
-    font-size: 18px;
 }
 
 .action {

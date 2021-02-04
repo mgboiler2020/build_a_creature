@@ -11,23 +11,26 @@
     </style>
 </head>
 <body>
-    <h1>User Profile</h1>
-    <form action='/users/profile/<%=user.id%>?_method=PUT' method='POST'>
-        Name: <input type='text' name='name' value='<%=user.name%>'/><br/>
-        Username: <input type='text' name='username' value='<%=user.username%>'/><br/>
-        Password: <input type='text' name='password' value='<%=user.password%>'/><br/>
-    <br>
-    <input type='submit' value='Edit Profile' />
-    <br>
-    </form>
-    <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete User" />
-    </form>
-    <form action="/build" method="POST">
-    <input type="submit" value="Create your Own Creature"/>
-    </form>
-    <a href="/gardens">View all Creatures</a>
+    <h1>User's Profile</h1>
+    
+        <form action='/users/profile/<%=user.id%>?_method=PUT' method='POST'>
+            Name: <input type='text' name='name' value='<%=user.name%>'/><br/>
+            Username: <input type='text' name='username' value='<%=user.username%>'/><br/>
+            Password: <input type='password' name='password' value='<%=user.password%>'/><br/>
+    <nav>
+            <input type='submit' value='Edit Profile' class="action"/>
+        </form>
+        <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete User" class="action"/>
+        </form>
+    </nav>
 
+    <nav>
+        <form action="/build" method="GET">
+            <input type="submit" value="Create your Own Creature" name="<%=user.id%>" class="goto"/>
+        </form>
+        <a href="/gardens" class="goto">View all Creatures</a>
+    </nav>
 
 
 </body>

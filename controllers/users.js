@@ -35,16 +35,17 @@ const signUp = (req, res) => {
     })
   
 }
+
 //Display Login 
 const renderLogin = (req, res) => { //done
     res.render('users/login.ejs');
 }
 //Display Profile
 const renderProfile = (req, res) => {
-    console.log(req.params.index);
+    //console.log(req.params.index);
     User.findByPk(req.params.index)
     .then(userProfile => {
-        console.log(userProfile);
+        //console.log(userProfile);
         res.render('users/profile.ejs', {
             user: userProfile
         })
@@ -73,19 +74,15 @@ const deleteUser = (req, res) => {
         res.redirect('/users');
     })
 }
-const renderBuild = (req, res) => { //done
-    Build.FindAll({
-        include: [
-            {
-                model: User, 
-                attributes: [user.id]
-            }
-        ]
+
+const renderBuild = (req, res) => {
+    console.log(req.body),
+    User.FindByPK({where: {id: User.id}
     })
     .then(newBuild => {
         //default is GET in redirect
         console.log(newBuild);
-        res.redirect('/build');
+        //res.redirect('/build');
     })
 }
 // req.body.userId = req.user.id;
@@ -109,5 +106,4 @@ module.exports = {
     editProfile,
     deleteUser,
     renderBuild
-   
 }

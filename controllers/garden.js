@@ -20,13 +20,30 @@ const createAnimal = (req, res) => {
 }
 
 const renderAnimal = (req, res) => {
+    console.log(req.body)
+    /*Garden.findOne(req.body.name, {
+        include: [{
+            model: User
+        }]
+    })*/
     BodyPart.findAll({
         where: {
           id: req.body.bodypart  
         }
-    }).then(selectedPart => {
+    })
+    /*.then(player => {
+        User.findOne({
+            where: {
+                name: req.body.name
+            },
+            player: player,
+        })
+    })*/
+    .then(selectedPart => {
+        console.log(selectedPart),
+        //console.log(player),
         res.render("gardens/new.ejs",{
-            selectedPart: selectedPart
+            selectedPart: selectedPart,
         })
     })
 }
