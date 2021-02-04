@@ -11,10 +11,10 @@
 </head>
 <body>
     <h2>You can start building your creature now!</h2>
-    <h3>Enter your name and check the body parts you want to use:</h3>
+    <h3>Check the body parts you want to use:</h3>
 
     <form action="/gardens/new" method="POST">
-        <input type="text" name="name" placeholder="Your name"/>
+
     <ul class="available">
         <% for (let i=0; i<bodyparts.length; i++) { %> 
             <li>
