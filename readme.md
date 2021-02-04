@@ -41,7 +41,7 @@ Once in the build screen the user can select the body parts needed via checkboxe
 ![signup](/readme_images/signup.png)
 
 ### Login
-![login](/readme_images/Answerlogin.png)
+![login](/readme_images/login.png)
 
 ### User Profile
 ![userprofile](/readme_images/userprofile.png)
@@ -65,16 +65,22 @@ Once in the build screen the user can select the body parts needed via checkboxe
 + The completed creature will be assigned to the user ID ✔︎
 
 ### Stretch Goal 1 (might move back to MVP)
-+ The completed creature will be assigned to the user ID and the user can see all the creatures they have created in the past.
++ The user can see all the creatures they have created in the past.
 
 ### Stretch Goal 2
 + We want to be able to create an imaginary animal.
 
 ### Strecth Goal 3
-+ We don’t want to be able to create the same animal we did previously
++ We do not want to be able to create the same animal we did previously
 
 ### Strecth Goal 4
 + We want to see images of the animals we created
+
+### Strecth Goal 5
++ We want to edit/update the animals we created
+
+### Strecth Goal 6
++ We want to delete the animals we created
 
 ## Author
 Ana Cecilia Maldonado Cervantes and Matthew Otis Guffy
