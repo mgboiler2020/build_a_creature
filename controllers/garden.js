@@ -11,21 +11,25 @@ const index = (req, res) => {
     });
 }; 
 
-/*
 const createAnimal = (req, res) => {
-    console.log(req.body),
-    res.render("gardens/new.ejs")
-    }
-    */
+    Garden.create(req.body)
+    .then(newCreature => {
+        console.log(newCreature),
+        res.redirect("/gardens")
+    })
+}
 
 const renderAnimal = (req, res) => {
-    BodyPart.findByPk(req.params.name)
-    .then(newAnimal => {
-        res.render("gardens/new.ejs", {
-            newAnimal: newAnimal});
-            console.log(newAnimal)
+    BodyPart.findAll({
+        where: {
+          id: req.body.bodypart  
+        }
+    }).then(selectedPart => {
+        res.render("gardens/new.ejs",{
+            selectedPart: selectedPart
         })
-    }
+    })
+}
 
 //READ (Show-Get)
 const show = (req, res) => {
@@ -42,6 +46,6 @@ const show = (req, res) => {
 module.exports = {
     index,
     show,
-    //createAnimal,
+    createAnimal,
     renderAnimal
 };
