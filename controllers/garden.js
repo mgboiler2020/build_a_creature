@@ -19,12 +19,12 @@ const createAnimal = (req, res) => {
     */
 
 const renderAnimal = (req, res) => {
-    BodyPart.findAll()
+    BodyPart.findByPk(req.params.name)
     .then(newAnimal => {
         res.render("gardens/new.ejs", {
             newAnimal: newAnimal});
-            checkedParts: req.body;
-        }),console.log(checkedParts)
+            console.log(newAnimal)
+        })
     }
 
 //READ (Show-Get)
