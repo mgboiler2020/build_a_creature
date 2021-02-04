@@ -1,5 +1,6 @@
 const User = require('../models').User;
 const Garden = require('../models').Garden;
+const BodyPart = require("../models").BodyPart;
 
 
 //Display index "Welcome to Create a Creature" page
@@ -72,9 +73,31 @@ const deleteUser = (req, res) => {
         res.redirect('/users');
     })
 }
-const renderIndex = (req, res) => { //done
-    res.render('index.ejs');
+const renderBuild = (req, res) => { //done
+    Build.FindAll({
+        include: [
+            {
+                model: User, 
+                attributes: [user.id]
+            }
+        ]
+    })
+    .then(newBuild => {
+        //default is GET in redirect
+        console.log(newBuild);
+        res.redirect('/build');
+    })
 }
+// req.body.userId = req.user.id;
+    
+//     Fruit.create(req.body)
+//     .then(newFruit => {
+//         //default is GET in redirect
+//         res.redirect('/fruits');
+//     })
+// }
+  
+
 
 module.exports = {
     index,
@@ -85,6 +108,6 @@ module.exports = {
     login,
     editProfile,
     deleteUser,
-    renderIndex
+    renderBuild
    
 }
