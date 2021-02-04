@@ -5,10 +5,17 @@ const User = require("../models").User;
 
 //READ (Index-Get)
 const index = (req, res) => {
-    BodyPart.findAll()
+    console.log("anacé")
+    console.log(req.body)
+    BodyPart.findAll({
+        include: [{
+            model: User
+        }]
+    })
     .then(bodyparts => {
         res.render("index.ejs", {
-            bodyparts: bodyparts
+            bodyparts: bodyparts,
+            id: req.query.id
         });
     });   
 }; 

@@ -75,26 +75,17 @@ const deleteUser = (req, res) => {
     })
 }
 
+/* NOT DOING ANYTHING AT THIS MOMENT
 const renderBuild = (req, res) => {
     console.log(req.body),
-    User.FindByPK({where: {id: User.id}
+    User.FindByPK({where: {id: req.params.index}
     })
     .then(newBuild => {
         //default is GET in redirect
         console.log(newBuild);
         //res.redirect('/build');
     })
-}
-// req.body.userId = req.user.id;
-    
-//     Fruit.create(req.body)
-//     .then(newFruit => {
-//         //default is GET in redirect
-//         res.redirect('/fruits');
-//     })
-// }
-  
-
+}*/
 
 module.exports = {
     index,
@@ -105,5 +96,5 @@ module.exports = {
     login,
     editProfile,
     deleteUser,
-    renderBuild
+    //renderBuild NOT DOING ANYTHING AT THIS MOMENT
 }
