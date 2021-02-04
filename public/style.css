@@ -54,11 +54,12 @@ nav a, .goto, .back {
     margin-top: 1rem;
 }
 
-.creature, .available {
+.creature, .available, .bodypart {
     font-family: 'Emilys Candy', cursive;
     text-decoration: none;
     font-size: 38px;
     color: #f27a5e;
+    list-style: none;
 }
 
 .available {
@@ -101,6 +102,7 @@ ul {
 
 input[type=text], input[type=url], input[type=password], select, label {
     font-size: 18px;
+    margin-bottom:1rem;
 }
 
 div {

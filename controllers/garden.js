@@ -19,13 +19,11 @@ const createAnimal = (req, res) => {
     */
 
 const renderAnimal = (req, res) => {
-    console.log(req.body);
     BodyPart.findAll({
         where: {
           id: req.body.bodypart  
         }
     }).then(selectedPart => {
-        console.log(selectedPart)
         res.render("gardens/new.ejs",{
             selectedPart: selectedPart
         })

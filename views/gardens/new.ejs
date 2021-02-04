@@ -12,10 +12,17 @@
 </head>
 <body>
     
-<h1> NEW</h1>
+    <h2>These are the body parts you selected:</h2>
 
-
-<p><%=selectedPart[0].name%></p>
+    <% for (let i=0; i<selectedPart.length; i++) { %>
+        <li class="bodypart"><%=selectedPart[i].name%> </li>
+    <% } %> 
+    <br>
+    
+    <form action='/gardens/show' method='POST'></form>
+    Type the name of your Creature:
+    <input type="text" placeholder="Creature's name"/><br>
+    <input type='submit' value='CREATE' class = "goto"/>
 
 </body>
 </html>
