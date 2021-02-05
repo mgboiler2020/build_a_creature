@@ -34,7 +34,7 @@ Once in the build screen the user can select the body parts needed via checkboxe
 ![WF](/readme_images/wireframe.png)
 
 ### Views
-![View](/readme_images/img_8293.jpg.png)
+![View](/readme_images/img_8293.jpg)
 
 ### Welcome Screen
 ![welcome](/readme_images/welcome.png)
