@@ -66,7 +66,7 @@ Once in the build screen the user can select the body parts needed via checkboxe
 + All creatures created are displayed in gallery ✔︎
 + The completed creature will be assigned to the user ID ✔︎
 
-### Stretch Goal 1 (might move back to MVP)
+### Stretch Goal 1
 + The user can see all the creatures they have created in the past.
 
 ### Stretch Goal 2
