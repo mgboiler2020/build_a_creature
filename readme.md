@@ -40,9 +40,6 @@ Once in the build screen the user can select the body parts needed via checkboxe
 ### Sign Up
 ![signup](/readme_images/signup.png)
 
-### Login
-![login](/readme_images/login.png)
-
 ### User Profile
 ![userprofile](/readme_images/userprofile.png)
 
