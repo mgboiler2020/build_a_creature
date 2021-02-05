@@ -36,6 +36,9 @@ Once in the build screen the user can select the body parts needed via checkboxe
 ### Views
 ![View](/readme_images/IMG_8293.jpg)
 
+### ERD
+![ERD](/readme_images/image.png)
+
 ### Welcome Screen
 ![welcome](/readme_images/welcome.png)
 
