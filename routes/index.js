@@ -1,3 +1,5 @@
 module.exports = {
-    buildACreature: require("./build-a-creature"),
+    build: require("./build"),
+    users: require("./users"),
+    garden: require("./garden"),
 };

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+        h1 {font-family: 'Emilys Candy', cursive}
+    </style>
+</head>
+<body>
+    <h1>User's Profile</h1>
+    
+        <form action='/users/profile/<%=user.id%>?_method=PUT' method='POST'>
+            Name: <input type='text' name='name' value='<%=user.name%>'/><br/>
+            Username: <input type='text' name='username' value='<%=user.username%>'/><br/>
+            Password: <input type='password' name='password' value='<%=user.password%>'/><br/>
+    <nav>
+            <input type='submit' value='Edit Profile' class="action"/>
+        </form>
+        <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete User" class="action"/>
+        </form>
+    </nav>
+
+    <nav>
+        <a href="/build?id=<%=user.id%>" class="goto">Create your Own Creature</a>
+        <a href="/gardens" class="goto">View all Creatures</a>
+    </nav>
+
+</body>
+</html>

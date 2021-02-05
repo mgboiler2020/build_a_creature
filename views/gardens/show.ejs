@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build-a-Creature</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+        h1 {font-family: 'Emilys Candy', cursive}
+    </style>
+</head>
+<body>
+    <h1>Creature's Garden</h1>
+    This Creature's name is 
+    <%= oneCreature.creatureName %>
+
+    <br>
+<nav>
+    <form action="/gardens" method="GET">
+        <input type="submit" value="Back" class="back"/>
+    </form>
+    <form action="/gardens/<%=oneCreature.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Creature" class="action"/>
+    </form>
+</nav>
+
+</body>
+</html>
