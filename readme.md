@@ -83,4 +83,4 @@ Once in the build screen the user can select the body parts needed via checkboxe
 + We want to delete the animals we created
 
 ## Author
-Ana Cecilia Maldonado Cervantes and Matthew Otis Guffy
+Ana Cecilia Maldonado Cervantes and Matthew Otis Guffy.  Co-Creators
