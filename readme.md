@@ -77,7 +77,7 @@ Once in the build screen the user can select the body parts needed via checkboxe
 + We want to edit/update the animals we created
 
 ### Strecth Goal 6
-+ We want to delete the animals we created
++ We want to delete the animals we created ✔︎
 
 ## Author
 Ana Cecilia Maldonado Cervantes and Matthew Otis Guffy.  Co-Creators
