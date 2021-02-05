@@ -5,6 +5,17 @@ An online creature creation app (similar to Build-a-Bear)
 ## Description & Motivation
 We wanted to create an app for kids of all ages to be able to select animal body components and "build" them into complete creatures.
 
+## User Stories
+1)	As a user I want to be able to select the animal I want to build.
+2)	As a user I want to be able to see the animal I built at a later occasion.
+3)	As a user I want to be able to see what body parts are available to choose
+4)	As a user I want to be able to see the animals that other users create.
+5)	As a user I want to be able to create more than one animal
+6)	As a user I want to be able to create an imaginary animal
+7)	As a user I don’t want to be able to create the same animal I did
+8)	As a user I want to be able to name the animal I created (will be used to display)
+9)	As a user I want to see an image of the animal I created
+
 ## Technologies Used
 + Command Line: Interaction with the computer and navigating the file system.  Running local server (nodemon)
 + Source Control: Interaction, management and uploading files and changes on code to Git repository.
