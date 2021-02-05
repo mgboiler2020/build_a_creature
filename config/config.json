@@ -13,7 +13,9 @@
         "rejectUnauthorized": false
       }
     }
-
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
   
